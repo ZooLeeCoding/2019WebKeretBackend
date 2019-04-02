@@ -16,9 +16,11 @@ app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());
 
+var users = require('./gyak04_users');
+
 passport.use('local', new LocalStrategy.Strategy(function(
     username, password, done) {
-        if(username === "user" && password === '12345') {
+        if(users[username] && users[username] === password) {
             return done(null, username);
         } else {
             return done("Wrong username/pw", null);

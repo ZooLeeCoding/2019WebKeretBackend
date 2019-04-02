@@ -4,5 +4,3 @@ module.exports = {
     "alma": "gomba",
     "pelda": "peter"
 }
-
-//hasznalat pl. tomb["pista"]
